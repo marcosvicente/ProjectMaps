@@ -35,6 +35,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # my apps
+    'core',
+
+
+    'djangobower',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -53,7 +59,7 @@ ROOT_URLCONF = 'ProjectMaps.urls'
 TEMPLATES = (
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,3 +134,20 @@ STATICFILES_DIRS = [
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+
+# bower configuration
+BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_ROOT, 'components')
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'djangobower.finders.BowerFinder',
+)
+
+
+BOWER_INSTALLED_APPS = (
+    'jquery',
+    'underscore',
+    'angular',
+)
