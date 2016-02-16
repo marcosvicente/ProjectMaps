@@ -1,21 +1,41 @@
 {% extends "base.html"%}
 
-{% load staticfiles %}
+{% load static %}
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
 {% endblock %}
 
 {% block content%}
+{% verbatim %}
+	<main>
+		<section class="ponto-origem">
+			<form action="">
+				<label for="">Endereço </label>
+				<input type="">
 
-	<nav>
-		<ul>
-			<li>menu1</li>
-			<li>menu2</li>
-			<li>menu3</li>
-			<li>menu4</li>
-			<li>menu5</li>
-		</ul>
-	</nav>
 
+				<label for="">Bairo</label>
+				<input type="">
+
+				<input type="submit">
+
+			</form>
+		</section>
+		<section class="ponto-destino">
+
+		</section>
+
+		<section></section>
+	</main>
+
+
+{% endverbatim%}
+{% endblock %}
+
+
+{% block js%}
+
+<script type="text/javascript" src='{% static 'angular/angular.js' %}'></script>
 {% endblock %}
