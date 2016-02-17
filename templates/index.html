@@ -9,10 +9,13 @@
 
 {% block content%}
 {% for list in object_list %}
-<section style="background:#d1d1d1;">
-	<p>{{ list.origem }}</p>
-	<p>{{list.destino}}</p>
-	<p>{{list.combustivel}}</p>
+<section>
+	<a href="{{list.slug}}">
+		<ul>
+			<li>{{ list.origem }}</li>
+			<li>{{list.destino}}</li>
+		</ul>
+	</a>
 </section>
 
 {% endfor %}

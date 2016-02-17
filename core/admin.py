@@ -18,7 +18,8 @@ class CombustivelAdmin(admin.ModelAdmin):
 
 
 class ViagemAdmin(admin.ModelAdmin):
-    fields = ['combustivel', 'origem', 'destino']
+    fields = ['nome', 'slug', 'combustivel', 'origem', 'destino']
+    #prepopulated_fields = {'slug': ('nome',)}
 
 
 admin.site.register(Viagem, ViagemAdmin)

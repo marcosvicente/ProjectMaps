@@ -42,6 +42,9 @@ class Combustivel(models.Model):
 
 
 class Viagem(models.Model):
+    nome = models.CharField(max_length=100)
+    slug = models.SlugField()
+
     combustivel = models.OneToOneField(
         Combustivel,
     )
