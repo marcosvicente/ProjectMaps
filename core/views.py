@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.views import generic
+
+from .models import Viagem
 
 
-def index(request):
-    return render(request, 'index.html')
+class Index(generic.ListView):
+    template_name = "index.html"
+    model = Viagem

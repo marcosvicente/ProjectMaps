@@ -8,16 +8,19 @@
 {% endblock %}
 
 {% block content%}
-{% verbatim %}
+{% for list in object_list %}
+<section style="background:#d1d1d1;">
+	<p>{{ list.origem }}</p>
+	<p>{{list.destino}}</p>
+	<p>{{list.combustivel}}</p>
+</section>
 
-
-{% endverbatim%}
+{% endfor %}
 
 {% endblock %}
 
-
+origem
 {% block js%}
 
-    </script>
 <script type="text/javascript" src='{% static 'angular/angular.js' %}'></script>
 {% endblock %}
