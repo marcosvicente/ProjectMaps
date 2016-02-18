@@ -62,6 +62,11 @@ class Viagem(models.Model):
         decimal_places=2,
     )
 
+    total_preco = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+    )
+
     def __str__(self):
         return "Origem : {},  Destino: {}, Combustivel:  {}".format(
             self.origem,
