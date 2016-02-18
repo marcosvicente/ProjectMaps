@@ -18,17 +18,20 @@ class CombustivelAdmin(admin.ModelAdmin):
 
 
 class ViagemAdmin(admin.ModelAdmin):
-    fields = [
+    list_display = [
         'nome',
-        'slug',
         'combustivel',
         'origem',
         'destino',
-        'quilometros'
+        'quilometros',
+        'total_preco'
     ]
-    prepopulated_fields = {'slug': ('nome',)}
-    exclude = ['slug']
 
+    # O valor do nome é inserido no slug
+    prepopulated_fields = {'slug': ('nome',)}
+
+    # lista de post por pagina
+    list_per_page = 25
 admin.site.register(Viagem, ViagemAdmin)
 admin.site.register(Combustivel, CombustivelAdmin)
 admin.site.register(Destino, DestinoAdmin)

@@ -147,6 +147,5 @@ STATICFILES_FINDERS = (
 
 BOWER_INSTALLED_APPS = (
     'jquery',
-    'underscore',
     'angular',
 )
