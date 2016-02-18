@@ -24,9 +24,10 @@ class ViagemAdmin(admin.ModelAdmin):
         'combustivel',
         'origem',
         'destino',
-        'quilometros']
+        'quilometros'
+    ]
     prepopulated_fields = {'slug': ('nome',)}
-
+    exclude = ['slug']
 
 admin.site.register(Viagem, ViagemAdmin)
 admin.site.register(Combustivel, CombustivelAdmin)
