@@ -35,7 +35,10 @@ class Combustivel(models.Model):
         choices=COMBUSTIVEL,
         default="GASOLINA"
     )
-    preco = models.FloatField()
+    preco = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+    )
 
     def __str__(self):
         return self.combustivel
@@ -53,7 +56,10 @@ class Viagem(models.Model):
     )
     destino = models.OneToOneField(
         Destino,
-        on_delete=models.CASCADE
+    )
+    quilometros = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
     )
 
     def __str__(self):
