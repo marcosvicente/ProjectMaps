@@ -10,15 +10,16 @@
 {% block content%}
 
 {% for list in object_list %}
-<section>
-	<a href="{{list.slug}}">
-		<ul>
-			<li>{{ list.origem }}</li>
-			<li>{{list.destino}}</li>
-		</ul>
-	</a>
-</section>
-
+<main role="main">
+	<section class="lista-lugares">
+		<a href="{{list.slug}}">
+			<ul>
+				<li>{{ list.origem }}</li>
+				<li>{{list.destino}}</li>
+			</ul>
+		</a>
+	</section>
+</main>
 {% endfor %}
 
 
