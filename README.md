@@ -1,3 +1,11 @@
+## Virtual Env
+
+	$ virtualenv env
+	$ source bin/activate
+
+## Cloning project
+	$ git clone https://github.com/marcosvicente/ProjectMaps.git
+
 
 ## Deployment to Heroku
 
