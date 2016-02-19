@@ -11,7 +11,7 @@
 
 {% for list in object_list %}
 <main role="main">
-	<section class="lista-lugares">
+		<section class="lista-lugares">
 		<a href="{{list.slug}}">
 			<ul>
 				<li class="lista-lugares-origem ">{{ list.origem }}</li>
@@ -21,34 +21,9 @@
 	</section>
 </main>
 {% endfor %}
-
-
-
-<div id="map"></div>
 {% endblock %}
 
 {% block js%}
-<!-- google maps
-	<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7AAhRsTjOY0LX7ZDK1N4pevKpIE0CD_M
-        &libraries=visualization&callback=initMap">
-    </script>
-	<script>
-		function initMap() {
-			var map = new google.maps.Map(document.getElementById('map'), {
-				center: {lat: 0, lng: 0},
-				zoom: 3,
-				styles: [{
-					featureType: 'poi',
-					stylers: [{ visibility: 'off' }]  // Turn off points of interest.
-				}, {
-					featureType: 'transit.station',
-					stylers: [{ visibility: 'off' }]  // Turn off bus stations, train stations, etc.
-				}],
-				disableDoubleClickZoom: true
-			});
-		}
-  </script>
--->
+
 <script type="text/javascript" src="{% static 'angular/angular.js' %}"></script>
 {% endblock %}

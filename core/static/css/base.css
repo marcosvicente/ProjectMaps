@@ -1,6 +1,36 @@
 body{
 	font: 62.5%/1.4 sans-serif;
 }
+/* * * * * * * * * * * *
+ * Cadastro de lugares *
+ * * * * * * * * * * * */
+.cadastro-lugares{
+	background:#7f7ffe;
+}
+.cadastro-lugares form{
+	padding: 2em 0;
+
+}
+.cadastro-lugares form label{
+	color:#fff;
+	font-size:2em;
+}
+.cadastro-lugares form input {
+	border: 1px solid #fff;
+	padding:0.5em;
+	margin-left:2em;
+}
+.cadastro-lugares form select {
+	border: 1px solid #fff;
+	padding:0.8em;
+	background:#fff;
+	font-size:1em;
+}
+.cadastro-lugares form select object{
+}
+/* * * * * * * * * * * *
+ * Lista de lugares* * *
+ * * * * * * * * * * * */
 .lista-lugares{
 	background:#343434;
 }

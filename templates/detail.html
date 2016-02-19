@@ -1,0 +1,32 @@
+{% extends "base.html"%}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+{% endblock %}
+
+{% block content%}
+
+
+<h1>{{ object.nome}}</h1>
+
+<h1>{{ object.origem}}</h1>
+
+<h1>{{ object.destino}}</h1>
+
+<h1>{{ object.combustivel}}</h1>
+
+<h1>{{ object.combustivel.preco}}</h1>
+
+<h1>{{ object.quilometros }}</h1>
+
+<h1>Total preço {{object.total_preco}}</h1>
+
+{% endblock %}
+
+{% block js%}
+
+<script type="text/javascript" src='{% static 'angular/angular.js' %}'></script>
+{% endblock %}
