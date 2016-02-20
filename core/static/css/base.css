@@ -21,17 +21,19 @@ body{
  * Image de Fundo* * * *
  * * * * * do  * * * * *
  * * * Cadastro* * * * *
- * * * *  E  * * * * * *
  * * *  Origem * * * * *
+ * * * Destino * * * * *
  * * * * * * * * * * * */
 
 .imagem-cadastro,
-.imagem-origem{
+.imagem-origem,
+.imagem-destino{
 	background:#000111;
 	margin-bottom:2em ;
 }
 .imagem-cadastro img,
-.imagem-origem img{
+.imagem-origem img,
+.imagem-destino img{
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
@@ -39,7 +41,8 @@ body{
 }
 
 .imagem-cadastro h2,
-.imagem-origem h2 {
+.imagem-origem h2,
+.imagem-destino h2{
 	color:#fff;
 	margin:2em 0;
 	font-size:4em;
@@ -50,6 +53,12 @@ body{
  * * * * * * * * * * * */
 #origem{
 	background:#421545;
+}
+/* * * * * * * * * * * *
+ * Destino dos lugares *
+ * * * * * * * * * * * */
+#destino{
+	background:#008400;
 }
 
 /* * * * * * * * * * * *

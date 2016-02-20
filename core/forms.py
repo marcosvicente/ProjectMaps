@@ -1,8 +1,7 @@
 # -*- encoding: utf-8 -*-
 from django import forms
 
-
-from .models import Viagem, Origem
+from .models import Viagem, Origem, Destino
 
 
 # Form, para inserir dadso no banco de dados da tabela Viagem
@@ -49,3 +48,8 @@ class OrigemForm(forms.ModelForm):
         model = Origem
         fields = "__all__"
 
+
+class DestinoForm(forms.ModelForm):
+    class Meta:
+        model = Destino
+        fields = "__all__"

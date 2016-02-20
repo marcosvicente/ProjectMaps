@@ -60,7 +60,9 @@
 			<div class="wow bounceIn">
 				{{form.destino.errors}}
 			</div>
-			<label for="{{form.destino.label}}">Destino</label>
+			<label for="{{form.destino.label}}">Destino
+				<a href="{% url 'destino' %}">+</a>
+			</label>
 			{{form.destino}}
 		</div>
 
