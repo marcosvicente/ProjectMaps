@@ -12,6 +12,12 @@
 {% endblock %}
 
 {% block content%}
+<div id="cadastro">
+<section class="imagem-cadastro">
+	<img src="{%static 'img/viagem.jpg' %}">
+	<h2>Cadastro de Viagem</h2>
+
+</section>
 <section class="cadastro-lugares">
 	<form method="POST" action=''>
 		{% csrf_token %}
@@ -77,6 +83,8 @@
 		<input type="submit" value="Nova viagem" >
 	</form>
 </section>
+
+</div>
 {% endblock %}
 
 {% block js%}

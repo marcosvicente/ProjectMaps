@@ -10,13 +10,51 @@
 body{
 	font: 62.5%/1.4 sans-serif;
 	margin: 0 auto;
-	background:#7f7ffe;
 }
 /* * * * * * * * * * * *
  * Cadastro de lugares *
  * * * * * * * * * * * */
-.cadastro-lugares{
+#cadastro{
+	background:#7f7ffe;
 }
+/* * * * * * * * * * * *
+ * Image de Fundo* * * *
+ * * * * * do  * * * * *
+ * * * Cadastro* * * * *
+ * * * *  E  * * * * * *
+ * * *  Origem * * * * *
+ * * * * * * * * * * * */
+
+.imagem-cadastro,
+.imagem-origem{
+	background:#000111;
+	margin-bottom:2em ;
+}
+.imagem-cadastro img,
+.imagem-origem img{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+}
+
+.imagem-cadastro h2,
+.imagem-origem h2 {
+	color:#fff;
+	margin:2em 0;
+	font-size:4em;
+	text-align:center;
+}
+/* * * * * * * * * * * *
+ * Origem de lugares * *
+ * * * * * * * * * * * */
+#origem{
+	background:#421545;
+}
+
+/* * * * * * * * * * * *
+ * Formulario* * * * * *
+ * * * * * * * * * * * */
 .cadastro-lugares form{
 	padding: 2em 0;
 	margin:0 auto;
@@ -27,14 +65,14 @@ body{
 
 }
 .fields label{
-	color:#fff;
+	color:#d1d1d1;
 	font-size:2em;
 	margin-left:1em;
 	margin-top: 20em;
 }
 .fields label a{
 	text-decoration: none;
-	color:#fff;
+	color:#d1d1d1;
 	background:#325462;
 	text-align:center;
 	font-size:1em;
@@ -46,12 +84,12 @@ body{
 .fields input[type="text"] ,
 .fields  input[type="number"] ,
 .fields  select{
-	border: 1px solid #fff;
+	border: 1px solid #d1d1d1;
 	margin-left:2em;
 	margin-top:1em;
 	width:100%;
 	padding:1em;
-	background:#fff;
+	background:#d1d1d1;
 	font-size:1em;
 	text-align:center;
 }
@@ -62,7 +100,7 @@ body{
 	background:#100000;
 	padding:2em;
 	border:none;
-	color:#fff;
+	color:#d1d1d1;
 	margin-top:2em;
 	/* Button no centro */
 	display:block;

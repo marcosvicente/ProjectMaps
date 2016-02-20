@@ -12,7 +12,13 @@
 {% endblock %}
 
 {% block content%}
+<div id="origem">
+<section class="imagem-origem">
+	<img src="{% static 'img/origem.jpg'%}" alt=""/>
+	<h2>Cadastro da origem</h2>
+</section>
 <section class="cadastro-lugares">
+
 	<form method="POST" action=''>
 		{% csrf_token %}
 		<div class="fields">
@@ -41,6 +47,7 @@
 		<input type="submit" value="Criar" >
 	</form>
 </section>
+</div>
 {% endblock %}
 
 {% block js%}

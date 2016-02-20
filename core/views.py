@@ -1,7 +1,7 @@
 from django.views import generic
 from django.views.generic.edit import FormView
 
-from .models import Viagem, Origem
+from .models import Viagem
 from .forms import ViagemForm, OrigemForm
 
 
