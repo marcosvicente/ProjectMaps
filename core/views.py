@@ -1,4 +1,5 @@
 from django.views import generic
+from django.views.generic.edit import FormView
 
 from .models import Viagem
 from .forms import ViagemForm
@@ -14,11 +15,11 @@ class IndexDetail(generic.DetailView):
     template_name = "detail.html"
 
 
-class Cadastro(generic.CreateView):
+class Cadastro(FormView):
     form_class = ViagemForm
     template_name = "cadastro.html"
-    # Savar dados na tabela Viagem
 
+    # Savar dados na tabela Viagem
     def form_valid(request):
         if request.method == 'POST':
             form = ViagemForm(request.POST)
@@ -27,5 +28,3 @@ class Cadastro(generic.CreateView):
                 novo_viagem.save()
         else:
             form = ViagemForm()
-
-

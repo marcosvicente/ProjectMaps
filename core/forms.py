@@ -10,7 +10,7 @@ class ViagemForm(forms.ModelForm):
 
     class Meta:
         model = Viagem
-        exclude = ["slug"]
+        fields = "__all__"
 
     def clean_nome(self):
         nome = self.cleaned_data.get('nome')
@@ -27,3 +27,8 @@ class ViagemForm(forms.ModelForm):
         if not total_preco > 0:
             raise forms.ValidationError("Digite um numero maior que 0")
         return total_preco
+
+    def clean_slug(self):
+        # o valor do field nome e redirecionando para o slug
+        slug = self.cleaned_data.get('name')
+        return slug
