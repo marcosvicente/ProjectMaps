@@ -2,7 +2,7 @@
 from django import forms
 
 
-from .models import Viagem
+from .models import Viagem, Origem
 
 
 # Form, para inserir dadso no banco de dados da tabela Viagem
@@ -16,8 +16,23 @@ class ViagemForm(forms.ModelForm):
         nome = self.cleaned_data.get('nome')
         return nome
 
+    def clean_combustivel(self):
+        combustivel = self.cleaned_data.get('combustivel')
+        return combustivel
+
+    def clean_origem(self):
+        origem = self.cleaned_data.get('origem')
+        return origem
+
+    def clean_destino(self):
+        destino = self.cleaned_data.get('destino')
+        return destino
+
     def clean_quilometros(self):
         quilometros = self.cleaned_data.get('quilometros')
+
+        if not quilometros > 0:
+            raise forms.ValidationError("Digite um numero maior que 0")
         return quilometros
 
     def clean_total_preco(self):
@@ -28,7 +43,9 @@ class ViagemForm(forms.ModelForm):
             raise forms.ValidationError("Digite um numero maior que 0")
         return total_preco
 
-    def clean_slug(self):
-        # o valor do field nome e redirecionando para o slug
-        slug = self.cleaned_data.get('name')
-        return slug
+
+class OrigemForm(forms.ModelForm):
+    class Meta:
+        model = Origem
+        fields = "__all__"
+

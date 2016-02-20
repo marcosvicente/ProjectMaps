@@ -1,31 +1,65 @@
+/* * * * * * * * * * * *
+ * Utilidades* * * * * *
+ * * * * * * * * * * * */
+*,*:before, *:after{
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
 body{
 	font: 62.5%/1.4 sans-serif;
+	margin: 0 auto;
+	background:#7f7ffe;
 }
 /* * * * * * * * * * * *
  * Cadastro de lugares *
  * * * * * * * * * * * */
 .cadastro-lugares{
-	background:#7f7ffe;
 }
 .cadastro-lugares form{
 	padding: 2em 0;
+	margin:0 auto;
+	width:50em;
+}
+.fields{
+	margin-top:2em;
 
 }
-.cadastro-lugares form label{
+.fields label{
 	color:#fff;
 	font-size:2em;
+	margin-left:1em;
 }
-.cadastro-lugares form input {
+.fields input[type="text"] ,
+.fields  input[type="number"] ,
+.fields  select{
 	border: 1px solid #fff;
-	padding:0.5em;
 	margin-left:2em;
-}
-.cadastro-lugares form select {
-	border: 1px solid #fff;
-	padding:0.8em;
+	width:100%;
+	padding:1em;
 	background:#fff;
 	font-size:1em;
+	text-align:center;
 }
+.fields select option{
+	font-size:2em;
+}
+.cadastro-lugares form input[type="submit"]{
+	background:#100000;
+	padding:2em;
+	border:none;
+	color:#fff;
+	margin-top:2em;
+	/* Button no centro */
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	/* End Button*/
+	font-size:1.5em;
+	border-radius:0.5em;
+}
+
 .cadastro-lugares form select object{
 }
 /* * * * * * * * * * * *
@@ -44,5 +78,40 @@ body{
 	display: inline;
 	margin-right: 25%;
 }
+
+/* * * * * * * * * * *
+ * Error Lista form* *
+ * * * * * * * * * * */
+.errorlist{
+background:#ff0000;
+color:#fff;
+padding:2em;
+margin: 2em;
+}
+
+.errorlist  li{
+list-style:none;
+font-size:1.5em;
+
+}
+
+/* * * * * * * * * * *
+ * Media query 500px *
+ * * * * * * * * * * */
+@media screen and (max-width:40em){
+/* * * * * * * * * * * *
+ * Cadastro de lugares *
+ * * * * * * * * * * * */
+.cadastro-lugares form input[type="text"] ,
+.cadastro-lugares form input[type="number"] ,
+.cadastro-lugares form select{
+		width:100%;
+	}
+	.cadastro-lugares form input[type="submit"]{
+		width:100%;
+		border-radius:0;
+	}
+}
+
 
 

@@ -149,4 +149,6 @@ BOWER_INSTALLED_APPS = (
     'jquery',
     'angular',
     'normalize-css',
+    'animate.css'
+    'wowjs'
 )

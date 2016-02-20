@@ -17,7 +17,7 @@ class Origem(models.Model):
     endereco = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.cidade
+        return "{} {} {}".format(self.cidade, self.bairro, self.endereco)
 
 
 class Destino(models.Model):
@@ -26,7 +26,7 @@ class Destino(models.Model):
     endereco = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.cidade
+        return "{} {} {}".format(self.cidade, self.bairro, self.endereco)
 
 
 class Combustivel(models.Model):
@@ -41,7 +41,7 @@ class Combustivel(models.Model):
     )
 
     def __str__(self):
-        return self.combustivel
+        return "{} {}".format(self.combustivel, self.preco)
 
 
 class Viagem(models.Model):
@@ -50,6 +50,7 @@ class Viagem(models.Model):
 
     combustivel = models.OneToOneField(
         Combustivel,
+        unique=False,
     )
     origem = models.OneToOneField(
         Origem,
