@@ -27,6 +27,13 @@ class Cadastro(FormView):
 
         return super(Cadastro, self).form_valid(form)
 
+
 class CadastroOrigem(FormView):
     form_class = OrigemForm
     template_name = "origem.html"
+    success_url = '/cadastro/'
+
+    def form_valid(self, form):
+        novo_origem = form.save(commit=False)
+        novo_origem.save()
+        return super(CadastroOrigem, self).form_valid(form)

@@ -43,9 +43,11 @@
 			<div class="wow bounceIn">
 				{{form.origem.errors}}
 			</div>
-			<label for="{{form.origem.label}}">Origem</label>
+			<label for="{{form.origem.label}}">
+				Origem
+				<a href="{% url 'origem' %}">+</a>
+			</label>
 			{{form.origem}}
-			<a href="{% url 'origem' %}">Cadastre seus dados de Origem</a>
 		</div>
 
 		<div class="fields">

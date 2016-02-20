@@ -23,7 +23,7 @@ body{
 	width:50em;
 }
 .fields{
-	margin-top:2em;
+	margin-top:2.2em;
 
 }
 .fields label{
@@ -31,6 +31,17 @@ body{
 	font-size:2em;
 	margin-left:1em;
 }
+.fields label a{
+	text-decoration: none;
+	color:#fff;
+	background:#325462;
+	text-align:center;
+	font-size:1em;
+	padding:0 0.2em;
+	float:right;
+	border-radius:100%;
+}
+
 .fields input[type="text"] ,
 .fields  input[type="number"] ,
 .fields  select{
