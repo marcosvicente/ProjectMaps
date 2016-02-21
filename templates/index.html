@@ -9,14 +9,12 @@
 ""
 {% block content%}
 <div class="all-index">
-	<main role="main">
-		<nav>
+	<main role="main" id="inicio">
+		<nav class="menu">
 			<ul>
+				<li><a href="#" class="scroll">Inicio</a></li>
 				<li><a href="#mapas"  class="scroll">Mapas Prontos</a></li>
 				<li><a href="#novo-mapa" class="scroll">Nova viagem</a></li>
-				<li><a href="">menu3</a></li>
-				<li><a href="">menu4</a></li>
-				<li><a href="">menu5</a></li>
 			</ul>
 		</nav>
 		<section class="banner">
@@ -34,8 +32,8 @@
 				<tbody>
 					{% for list in object_list %}
 					<tr>
-						<td><a href="{{list.slug}}">{{ list.origem }}</a></td>
-						<td><a href="{{list.slug}}">{{list.destino}}</a></td>
+						<td><a href="mapas/{{list.slug}}">{{ list.origem }}</a></td>
+						<td><a href="mapas/{{list.slug}}">{{list.destino}}</a></td>
 					</tr>
 					{% endfor %}
 				<tbody>
@@ -58,13 +56,9 @@
 <script type="text/javascript" src="{% static 'angular/angular.js' %}"></script>
 <script type="text/javascript" src="{% static 'jquery/dist/jquery.min.js'%}"></script>
 
-<!--Scroll menu -->
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);
-	   });
-	});
+<script type="text/javascript" language="javascript" charset="utf-8">
+$(document).ready( function() {
+	$('.menu').smint();
+});
 </script>
 {% endblock %}

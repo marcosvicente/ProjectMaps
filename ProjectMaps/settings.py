@@ -1,14 +1,5 @@
-"""
-Django settings for ProjectMaps project on Heroku. Fore more info, see:
-https://github.com/heroku/heroku-django-template
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.9/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.9/ref/settings/
-"""
-
+# !/usr/bin/python
+# -*- coding: utf-8 -*-
 import os
 import dj_database_url
 
@@ -35,12 +26,18 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     # my apps
     'core',
-
+    # djangobower é utilizado para usar o bower
     'djangobower',
+
+    # django registration é usado para criar um app de login
+    'registration',
 )
+
+SITE_ID = 1
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -104,6 +101,7 @@ AUTH_PASSWORD_VALIDATORS = (
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
 LANGUAGE_CODE = 'pt-br'
+TIME_ZONE = 'America/Sao_Paulo'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
@@ -152,3 +150,10 @@ BOWER_INSTALLED_APPS = (
     'animate.css'
     'wowjs'
 )
+
+# django registration
+REGISTRATION_AUTO_LOGIN = True
+ACCOUNT_ACTIVATION_DAYS = 7
+SEND_ACTIVATION_EMAIL = True
+REGISTRATION_AUTO_LOGIN = False
+LOGIN_REDIRECT_URL = '/'

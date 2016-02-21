@@ -107,9 +107,11 @@ nav ul li a{
 	border-radius:100%;
 }
 
-.fields input[type="text"] ,
-.fields  input[type="number"] ,
-.fields  select{
+.fields input[type="text"],
+.fields input[type="number"],
+.fields input[type="password"],
+.fields input[type="email"],
+.fields select{
 	border: 1px solid #d1d1d1;
 	margin-left:2em;
 	margin-top:1em;
@@ -193,6 +195,129 @@ nav ul li a{
 }
 .nova-viagem a{
 	text-decoration:none;
+}
+
+/* * * * * * * * * * *
+ * * * *Login* * * * *
+ * * * * * * * * * * */
+header h1{
+	text-align:center;
+	font-size:4em;
+	margin:1em 2em 2em 2em;
+}
+.login{
+	width:60em;
+	margin-left:auto;
+	margin-right:auto;
+}
+.login a{
+	text-decoration:none;
+	color:#fff;
+	background:#362;
+	font-size:2em;
+	padding:1em;
+	margin-top:2em;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+
+}
+.button input[type="submit"]{
+	font-size:2em;
+	margin:2em;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	background:#325462;
+	border:none;
+	color:#fff;
+	border-radius:0.5em;
+	padding:1em;
+
+}
+/* * * * * * * * * * *
+ * * * *Logout * * * *
+ * * * * * * * * * * */
+.logout{
+	background:#321;
+	margin:-4em 0 0 0;
+}
+.logout h2{
+	font-size:4em;
+	color:#fff;
+	text-align:center;
+}
+.logout p{
+	font-size:4em;
+	text-align:center;
+}
+.logout p a{
+	text-decoration: none;
+	color:#fff;
+	}
+.logout img {
+	width:100%;
+}
+/* * * * * * * * * * * * * * *
+ * * * * *Criar Conta* * * * *
+ * * * * * * * * * * * * * * */
+.registrar form{
+	width:60em;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+
+.button input[type="submit"]{
+	font-size:2em;
+	margin:2em;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	background:#325462;
+	border:none;
+	color:#fff;
+	border-radius:0.5em;
+	padding:1em;
+
+}
+
+/* * * * * * * * * * * * * * *
+ * Conta email confirmation* *
+ * * * * * * * * * * * * * * */
+.conta-email{
+	padding:13em;
+	background:#321;
+}
+.conta-email img{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.conta-email h2{
+	text-align:center;
+	font-size:4em;
+	color:#fff;
+	margin-top:2em;
+}
+/* * * * * * * * * * *
+ * * * Mudar senha * *
+ * * * * * * * * * * */
+.mudar-senha h1{
+	text-align:center;
+	font-size:4em;
+}
+.mudar-senha p{
+	text-align:center;
+	font-size:4em;
+}
+.mudar-senha form{
+	width:60em;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
 }
 
 /* * * * * * * * * * *

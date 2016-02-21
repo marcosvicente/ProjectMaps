@@ -15,5 +15,12 @@ urlpatterns = [
 
     url(r'^cadastro/origem/$', CadastroOrigem.as_view(), name="origem"),
     url(r'^cadastro/destino/$', CadastroDestino.as_view(), name="destino"),
-    url(r'^(?P<slug>[-\w]+)/$', IndexDetail.as_view(), name='index-detail'),
+    url(
+        r'^mapas/(?P<slug>[-\w]+)/',
+        IndexDetail.as_view(),
+        name='index-detail'
+    ),
+
+    # django registration
+    url(r'^accounts/', include('registration.backends.hmac.urls')),
 ]
