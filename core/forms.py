@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 from django import forms
 
-from .models import Viagem, Origem, Destino
+from .models import Viagem, Origem, Destino, Combustivel
 
 
 # Form, para inserir dadso no banco de dados da tabela Viagem
@@ -52,4 +52,10 @@ class OrigemForm(forms.ModelForm):
 class DestinoForm(forms.ModelForm):
     class Meta:
         model = Destino
+        fields = "__all__"
+
+
+class CombustivelForm(forms.ModelForm):
+    class Meta:
+        model = Combustivel
         fields = "__all__"

@@ -2,7 +2,7 @@ from django.views import generic
 from django.views.generic.edit import FormView
 
 from .models import Viagem
-from .forms import ViagemForm, OrigemForm, DestinoForm
+from .forms import ViagemForm, OrigemForm, DestinoForm, CombustivelForm
 
 
 class Index(generic.ListView):
@@ -48,3 +48,14 @@ class CadastroDestino(FormView):
         novo_destino = form.save(commit=False)
         novo_destino.save()
         return super(CadastroDestino, self).form_valid(form)
+
+
+class CadastroCombustivel(FormView):
+    form_class = CombustivelForm
+    template_name = "combustivel.html"
+    success_url = "/cadastro/"
+
+    def form_valid(self, form):
+        novo_destino = form.save(commit=False)
+        novo_destino.save()
+        return super(CadastroCombustivel, self).form_valid(form)

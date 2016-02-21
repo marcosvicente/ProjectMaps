@@ -41,7 +41,9 @@
 			<div class="wow bounceIn">
 				{{form.combustivel.errors}}
 			</div>
-			<label for="{{form.combustivel.label}}">Combustivel</label>
+			<label for="{{form.combustivel.label}}">Combustivel
+				<a href="{% url 'combustivel' %}">+</a>
+			</label>
 			{{form.combustivel}}
 		</div>
 

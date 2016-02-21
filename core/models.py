@@ -41,7 +41,7 @@ class Combustivel(models.Model):
     )
 
     def __str__(self):
-        return "{} {}".format(self.combustivel, self.preco)
+        return "{} R${}".format(self.combustivel, self.preco)
 
 
 class Viagem(models.Model):

@@ -125,20 +125,54 @@ body{
 /* * * * * * * * * * * *
  * Lista de lugares* * *
  * * * * * * * * * * * */
-.lista-lugares{
-	background:#343434;
-}
-.lista-lugares a{
-	text-decoration:none;
-	color:#fff;
-	font-size:4em;
-}
-.lista-lugares a ul li {
-	list-style:none;
-	display: inline;
-	margin-right: 25%;
+.lista-lugares h2{
+	text-align:center;
+	font-size:2em;
 }
 
+.lista-lugares table tbody tr td a{
+	text-decoration:none;
+	color:#000;
+	text-align:center;
+}
+
+.lista-lugares table{
+	margin-left:auto;
+	margin-right:auto;
+}
+.lista-lugares table thead tr td{
+	padding:1em;
+	font-size:2em;
+	background:#1e1e1e;
+	color:#fff;
+	text-align:center;
+}
+.lista-lugares table tbody tr td{
+	padding:1em;
+	font-size:2em;
+	text-align:center;
+}
+
+/* * * * * * * * * * *
+ * Nova viagem * * * *
+ * * * * * * * * * * */
+.nova-viagem{
+	background:#432;
+}
+.nova-viagem p{
+	color:#fff;
+	text-align:center;
+	font-size:2em;
+	margin: 0 2em;
+}
+.nova-viagem a{
+	text-decoration:none;
+}
+.nova-viagem h2{
+	color:#fff;
+	text-align:center;
+	font-size:2em;
+}
 /* * * * * * * * * * *
  * Error Lista form* *
  * * * * * * * * * * */
