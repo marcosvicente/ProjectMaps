@@ -10,7 +10,19 @@
 {% block content%}
 <div class="all-index">
 	<main role="main">
-		<section class="lista-lugares">
+		<nav>
+			<ul>
+				<li><a href="#mapas"  class="scroll">Mapas Prontos</a></li>
+				<li><a href="#novo-mapa" class="scroll">Nova viagem</a></li>
+				<li><a href="">menu3</a></li>
+				<li><a href="">menu4</a></li>
+				<li><a href="">menu5</a></li>
+			</ul>
+		</nav>
+		<section class="banner">
+			<img src="{% static 'img/logistica.jpg'%}" />
+		</section>
+		<section class="lista-lugares" id="mapas">
 			<h2>Mapas prontos</h2>
 			<table>
 				<thead>
@@ -29,7 +41,7 @@
 				<tbody>
 			</table>
 		</section>
-		<section class="nova-viagem">
+		<section class="nova-viagem " id="novo-mapa">
 			<a href="{% url 'cadastro'%}">
 				<h2>Criar nova viagem</h2>
 				<p>
@@ -44,4 +56,15 @@
 {% block js%}
 
 <script type="text/javascript" src="{% static 'angular/angular.js' %}"></script>
+<script type="text/javascript" src="{% static 'jquery/dist/jquery.min.js'%}"></script>
+
+<!--Scroll menu -->
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);
+	   });
+	});
+</script>
 {% endblock %}

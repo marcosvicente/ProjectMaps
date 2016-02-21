@@ -1,0 +1,75 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+<!-- Biblioteca Css reset - Usado para zerar valores-->
+<link rel="stylesheet" href="{%static 'normalize-css/normalize.css'%}">
+<link rel="stylesheet" href="{% static 'animate.css/animate.css'%}" type="text/css" media="screen" charset="utf-8"/>
+{% endblock %}
+
+{% block content%}
+<div id="destino">
+<section class="imagem-destino">
+	<img src="{% static 'img/destino.jpg'%}" alt=""/>
+	<h2>Cadastro da Destino</h2>
+</section>
+<section class="cadastro-lugares">
+
+	<form method="POST" action=''>
+		{% csrf_token %}
+		<div class="fields">
+			<div class="wow bounceIn">
+				{{form.cidade.errors}}
+			</div>
+			<label for="{{form.cidade.label}}">Cidade:</label>
+			{{form.cidade}}
+		</div>
+
+		<div class="fields">
+			<div class="wow bounceIn">
+				{{form.endereco.errors}}
+			</div>
+			<label for="{{form.endereco.label}}">Endereço:</label>
+			{{form.endereco}}
+		</div>
+
+		<div class="fields">
+			<div class="wow bounceIn">
+				{{form.bairro.errors}}
+			</div>
+			<label for="{{form.bairro.label}}">Endereço:</label>
+			{{form.bairro}}
+		</div>
+		<input type="submit" value="Criar" >
+	</form>
+</section>
+</div>
+{% endblock %}
+
+{% block js%}
+<script type="text/javascript" src="{% static 'angular/angular.js' %}"></script>
+
+<!-- biclioteca de animação -->
+<script type="text/javascript" src="{% static 'wow/dist/wow.min.js'%}"></script>
+
+<script type="text/javascript" language="javascript" charset="utf-8">
+
+	var wow = new WOW(
+		{
+			boxClass:     'wow',      // animated element css class (default is wow)
+			animateClass: 'animated', // animation css class (default is animated)
+			offset:       0,          // distance to the element when triggering the animation (default is 0)
+			mobile:       true,       // trigger animations on mobile devices (default is true)
+			live:         true,       // act on asynchronously loaded content (default is true)
+			callback:     function(box) {
+				// the callback is fired every time an animation is started
+				// the argument that is passed in is the DOM node being animated
+			},
+			scrollContainer: null // optional scroll container selector, otherwise use window
+		}
+	);
+	wow.init();
+</script>
+{% endblock %}

@@ -12,10 +12,39 @@ body{
 	margin: 0 auto;
 }
 /* * * * * * * * * * * *
+ * * * * Menu* * * * * *
+ * * * * * * * * * * * */
+nav{
+	margin-top:-1.5em;
+	position:fixed;
+	width:100%;
+}
+nav ul {
+	background:#202020;
+
+	padding:1em;
+}
+
+nav ul li{
+	list-style:none;
+	display:inline;
+	margin:2em;
+}
+nav ul li a{
+	text-decoration:none;
+	color:#fff;
+	font-size:2em;
+}
+/* * * * * * * * * * * *
+ * * * * Banner  * * * *
+ * * * * * * * * * * * */
+.banner img {
+	width:100%;
+}
+/* * * * * * * * * * * *
  * Cadastro de lugares *
  * * * * * * * * * * * */
 #cadastro{
-	background:#7f7ffe;
 }
 /* * * * * * * * * * * *
  * Image de Fundo* * * *
@@ -48,18 +77,6 @@ body{
 	font-size:4em;
 	text-align:center;
 }
-/* * * * * * * * * * * *
- * Origem de lugares * *
- * * * * * * * * * * * */
-#origem{
-	background:#421545;
-}
-/* * * * * * * * * * * *
- * Destino dos lugares *
- * * * * * * * * * * * */
-#destino{
-	background:#008400;
-}
 
 /* * * * * * * * * * * *
  * Formulario* * * * * *
@@ -74,7 +91,7 @@ body{
 
 }
 .fields label{
-	color:#d1d1d1;
+	color:#000;
 	font-size:2em;
 	margin-left:1em;
 	margin-top: 20em;
@@ -99,7 +116,7 @@ body{
 	width:100%;
 	padding:1em;
 	background:#d1d1d1;
-	font-size:1em;
+	font-size:2em;
 	text-align:center;
 }
 .fields select option{
@@ -125,9 +142,12 @@ body{
 /* * * * * * * * * * * *
  * Lista de lugares* * *
  * * * * * * * * * * * */
+.lista-lugares{
+	padding: 2em;
+}
 .lista-lugares h2{
 	text-align:center;
-	font-size:2em;
+	font-size:3em;
 }
 
 .lista-lugares table tbody tr td a{
@@ -142,7 +162,7 @@ body{
 }
 .lista-lugares table thead tr td{
 	padding:1em;
-	font-size:2em;
+	font-size:3em;
 	background:#1e1e1e;
 	color:#fff;
 	text-align:center;
@@ -158,21 +178,23 @@ body{
  * * * * * * * * * * */
 .nova-viagem{
 	background:#432;
+	padding: 1em;
+}
+.nova-viagem h2{
+	color:#fff;
+	text-align:center;
+	font-size:5em;
 }
 .nova-viagem p{
 	color:#fff;
 	text-align:center;
-	font-size:2em;
+	font-size:3em;
 	margin: 0 2em;
 }
 .nova-viagem a{
 	text-decoration:none;
 }
-.nova-viagem h2{
-	color:#fff;
-	text-align:center;
-	font-size:2em;
-}
+
 /* * * * * * * * * * *
  * Error Lista form* *
  * * * * * * * * * * */
