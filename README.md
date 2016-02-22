@@ -26,5 +26,5 @@
 - [dj-database-url](https://warehouse.python.org/project/dj-database-url/)
 
 ## Admin
-   username = admin
-   senha = logistica
+ - username = admin
+ - senha = logistica
