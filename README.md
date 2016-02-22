@@ -1,5 +1,3 @@
-## Django 1.9
-
 ## Virtual Env
 
 	$ virtualenv env
@@ -7,6 +5,14 @@
 
 ## Cloning project
 	$ git clone https://github.com/marcosvicente/ProjectMaps.git
+
+## Django 1.8
+	pip install django==1.8
+
+## Django df database
+ 	pip install dj-database-url
+
+
 
 ## Deployment to Heroku
 

@@ -147,7 +147,6 @@ BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_ROOT, 'components')
 BOWER_PATH = '/usr/bin/bower'
 BOWER_INSTALLED_APPS = (
     'jquery',
-    'angular',
     'normalize-css',
     'animate.css'
     'wowjs'
