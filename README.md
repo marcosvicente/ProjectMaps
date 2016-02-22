@@ -12,8 +12,6 @@
 ## Django df database
  	pip install dj-database-url
 
-
-
 ## Deployment to Heroku
 
     $ git init
