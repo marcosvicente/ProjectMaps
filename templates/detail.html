@@ -4,29 +4,53 @@
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/base.css' %}">
-
+<link rel="stylesheet" href="{%static 'normalize-css/normalize.css'%}">
+<link rel="stylesheet" href="{% static 'animate.css/animate.css'%}" type="text/css" media="screen" charset="utf-8"/>
 {% endblock %}
 
 {% block content%}
 
+<section class="mapa-detail animated fadeIn">
+	<h1>Mapa</h1>
+	<p>Nome do mapa :{{ object.nome}}</p>
 
-<h1>{{ object.nome}}</h1>
+	<p>Origem :{{ object.origem}}</p>
 
-<h1>{{ object.origem}}</h1>
+	<p>Destino: {{ object.destino}}</p>
 
-<h1>{{ object.destino}}</h1>
+	<p>Combustivel: {{ object.combustivel.combustivel}}</p>
 
-<h1>{{ object.combustivel}}</h1>
+	<p>Combustivel Preço: R$ {{ object.combustivel.preco}}</p>
 
-<h1>{{ object.combustivel.preco}}</h1>
+	<p>Quilometro: {{ object.quilometros }} </p>
 
-<h1>{{ object.quilometros }}</h1>
+	<p>Total preço : R${{object.total_preco}}</p>
 
-<h1>Total preço {{object.total_preco}}</h1>
-
+	<a href="{% url 'index'%}">Voltar para a pagina inicial</a>
+</section>
 {% endblock %}
 
 {% block js%}
 
-<script type="text/javascript" src='{% static 'angular/angular.js' %}'></script>
+<!-- biclioteca de animação -->
+<script type="text/javascript" src="{% static 'wow/dist/wow.min.js'%}"></script>
+
+<script type="text/javascript" language="javascript" charset="utf-8">
+
+	var wow = new WOW(
+		{
+			boxClass:     'wow',      // animated element css class (default is wow)
+			animateClass: 'animated', // animation css class (default is animated)
+			offset:       0,          // distance to the element when triggering the animation (default is 0)
+			mobile:       true,       // trigger animations on mobile devices (default is true)
+			live:         true,       // act on asynchronously loaded content (default is true)
+			callback:     function(box) {
+				// the callback is fired every time an animation is started
+				// the argument that is passed in is the DOM node being animated
+			},
+			scrollContainer: null // optional scroll container selector, otherwise use window
+		}
+	);
+	wow.init();
+</script>
 {% endblock %}

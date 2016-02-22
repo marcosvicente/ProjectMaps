@@ -319,7 +319,28 @@ header h1{
 	margin-right:auto;
 	display:block;
 }
-
+/* * * * * * * * * * *
+ * Error Lista for* *
+ * * * * * * * * * * */
+.mapa-detail{
+	margin-left:auto;
+	margin-right:auto;
+	width:50em;
+}
+.mapa-detail h1{
+	font-size:3em;
+	text-align:center;
+}
+.mapa-detail p{
+	font-size:3em;
+}
+.mapa-detail a{
+	text-decoration:none;
+	font-size:2.5em;
+	color:#fff;
+	background:#323232;
+	padding:1em;
+}
 /* * * * * * * * * * *
  * Error Lista form* *
  * * * * * * * * * * */

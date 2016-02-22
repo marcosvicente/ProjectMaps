@@ -5,6 +5,7 @@
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/base.css' %}">
 <link rel="stylesheet" href="{%static 'normalize-css/normalize.css'%}">
+<link rel="stylesheet" href="{% static 'animate.css/animate.css'%}" type="text/css" media="screen" charset="utf-8"/>
 {% endblock %}
 ""
 {% block content%}
@@ -20,7 +21,7 @@
 		<section class="banner">
 			<img src="{% static 'img/logistica.jpg'%}" />
 		</section>
-		<section class="lista-lugares" id="mapas">
+		<section class="lista-lugares wow fadeIn" id="mapas">
 			<h2>Mapas prontos</h2>
 			<table>
 				<thead>
@@ -39,7 +40,7 @@
 				<tbody>
 			</table>
 		</section>
-		<section class="nova-viagem " id="novo-mapa">
+		<section class="nova-viagem wow fadeIn " id="novo-mapa">
 			<a href="{% url 'cadastro'%}">
 				<h2>Criar nova viagem</h2>
 				<p>
@@ -53,12 +54,26 @@
 
 {% block js%}
 
-<script type="text/javascript" src="{% static 'angular/angular.js' %}"></script>
 <script type="text/javascript" src="{% static 'jquery/dist/jquery.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'wow/dist/wow.min.js'%}"></script>
 
 <script type="text/javascript" language="javascript" charset="utf-8">
-$(document).ready( function() {
-	$('.menu').smint();
-});
+
+	var wow = new WOW(
+		{
+			boxClass:     'wow',      // animated element css class (default is wow)
+			animateClass: 'animated', // animation css class (default is animated)
+			offset:       0,          // distance to the element when triggering the animation (default is 0)
+			mobile:       true,       // trigger animations on mobile devices (default is true)
+			live:         true,       // act on asynchronously loaded content (default is true)
+			callback:     function(box) {
+				// the callback is fired every time an animation is started
+				// the argument that is passed in is the DOM node being animated
+			},
+			scrollContainer: null // optional scroll container selector, otherwise use window
+		}
+	);
+	wow.init();
 </script>
+
 {% endblock %}

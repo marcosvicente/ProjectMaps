@@ -29,19 +29,20 @@
 
 		<div class="fields">
 			<div class="wow bounceIn">
+				{{form.bairro.errors}}
+			</div>
+			<label for="{{form.bairro.label}}">Bairro:</label>
+			{{form.bairro}}
+		</div>
+
+		<div class="fields">
+			<div class="wow bounceIn">
 				{{form.endereco.errors}}
 			</div>
 			<label for="{{form.endereco.label}}">Endereço:</label>
 			{{form.endereco}}
 		</div>
 
-		<div class="fields">
-			<div class="wow bounceIn">
-				{{form.bairro.errors}}
-			</div>
-			<label for="{{form.bairro.label}}">Endereço:</label>
-			{{form.bairro}}
-		</div>
 		<input type="submit" value="Criar" >
 	</form>
 </section>
