@@ -33,8 +33,8 @@
 				<tbody>
 					{% for list in object_list %}
 					<tr>
-						<td><a href="mapas/{{list.slug}}">{{ list.origem }}</a></td>
-						<td><a href="mapas/{{list.slug}}">{{list.destino}}</a></td>
+						<td><a href="mapas/{{list.slug}}">Cidade: {{ list.origem.cidade }} - Bairro: {{list.origem.bairro}} - Endereço: {{list.origem.endereco}}</a></td>
+						<td><a href="mapas/{{list.slug}}">Cidade: {{ list.destino.cidade }} - Bairro: {{list.destino.bairro}} - Endereço: {{list.destino.endereco}}</a></td>
 					</tr>
 					{% endfor %}
 				<tbody>
