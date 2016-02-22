@@ -1,3 +1,5 @@
+## Django 1.9
+
 ## Virtual Env
 
 	$ virtualenv env
@@ -5,7 +7,6 @@
 
 ## Cloning project
 	$ git clone https://github.com/marcosvicente/ProjectMaps.git
-
 
 ## Deployment to Heroku
 
